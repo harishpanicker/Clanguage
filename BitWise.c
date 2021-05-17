@@ -83,8 +83,25 @@ int main(){
 				scanf("%d",&num1);
 				Reverse(num1);
 				break;
-			default: printf("Entered option is Incorrect!!!");
-				 exit(0);
+			case SWAP_ADJ:
+				printf("Enter the number = ");
+				scanf("%d",&num1);
+				Swap_adj(num1);
+				break;
+			case ROTATE_LEFT:
+				printf("Enter the number = ");
+				scanf("%d",&num1);
+				Rotate_left(num1);
+				break;
+			case ROTATE_RIGHT:
+				printf("Enter the number = ");
+				scanf("%d",&num1);
+				Rotate_right(num1);
+				break;
+			case EXIT:
+				printf("Bye.. Visit Again !! Thanks !!\n");
+				exit(0);
+			default: printf("Entered option is Incorrect!!!\n");
 		}
 	}
 
@@ -265,6 +282,36 @@ void Reverse(int num){
 	}
 
 	printf("After Reversing = ");
+	DecimalBinary(num);
+
+}
+
+void Swap_adj(int num)
+{
+
+	num=((num & 0xAAAAAAAA) >> 1) | ((num & 0x55555555) << 1);
+	DecimalBinary(num);
+}
+
+void Rotate_left(int num)
+{
+	int rot;
+	printf("Enter the number of rotation : ");
+	scanf("%d",&rot);
+
+	num=num<<rot | num>>(32-rot);
+	DecimalBinary(num);
+
+}
+
+void Rotate_right(int num)
+{
+
+	int rot;
+	printf("Enter the number of rotation : ");
+	scanf("%d",&rot);
+
+	num=num>>rot | num<<(32-rot);
 	DecimalBinary(num);
 
 }

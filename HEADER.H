@@ -16,6 +16,10 @@ const char *MenuOptions[] ={
 							"OnesZeros",
 							"Flip",
 							"Reverse",
+							"Swap_adj",
+							"Rotate_left",
+							"Rotate_right",
+							"Exit"
 							};
 
 
@@ -33,7 +37,11 @@ enum  {
 					LOWESTSETBIT,
 					ONESZEROS,
 					FLIP,
-					REVERSE
+					REVERSE,
+					SWAP_ADJ,
+					ROTATE_LEFT,
+					ROTATE_RIGHT,
+					EXIT
 };
 
 void LsbSetClear(int);
@@ -51,4 +59,7 @@ void OnesZeros(int);
 void Flip(int);
 void Reverse(int);
 void printOptions(void);
+void Swap_adj(int);
+void Rotate_left(int);
+void Rotate_right(int);
 
