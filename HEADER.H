@@ -19,6 +19,8 @@ const char *MenuOptions[] ={
 							"Swap_adj",
 							"Rotate_left",
 							"Rotate_right",
+							"Hex_binary",
+							"Oct_binary",
 							"Exit"
 							};
 
@@ -41,6 +43,8 @@ enum  {
 					SWAP_ADJ,
 					ROTATE_LEFT,
 					ROTATE_RIGHT,
+					HEX_BIN,
+					OCT_BIN,
 					EXIT
 };
 
@@ -62,4 +66,5 @@ void printOptions(void);
 void Swap_adj(int);
 void Rotate_left(int);
 void Rotate_right(int);
-
+void hex_bin(char*);
+void oct_bin(char*);
